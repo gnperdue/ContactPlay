@@ -8,7 +8,7 @@
 import CoreData
 import SwiftUI
 
-class ContactProvider: ObservableObject {
+class GroupedContactProvider: ObservableObject {
 
   @Published var contacts: [Contact] = []
   @Published var sortByName: Bool = true

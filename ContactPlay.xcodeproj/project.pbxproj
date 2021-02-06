@@ -13,6 +13,8 @@
 		036D54B125CEEF93007252F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D54B025CEEF93007252F3 /* Preview Assets.xcassets */; };
 		036D54B325CEEF93007252F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54B225CEEF93007252F3 /* Persistence.swift */; };
 		036D54B625CEEF93007252F3 /* ContactPlay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 036D54B425CEEF93007252F3 /* ContactPlay.xcdatamodeld */; };
+		036D54C025CEF0E2007252F3 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54BE25CEF0E2007252F3 /* Contact+CoreDataClass.swift */; };
+		036D54C125CEF0E2007252F3 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54BF25CEF0E2007252F3 /* Contact+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		036D54B225CEEF93007252F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		036D54B525CEEF93007252F3 /* ContactPlay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactPlay.xcdatamodel; sourceTree = "<group>"; };
 		036D54B725CEEF93007252F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036D54BE25CEF0E2007252F3 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		036D54BF25CEF0E2007252F3 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		036D54A825CEEF92007252F3 /* ContactPlay */ = {
 			isa = PBXGroup;
 			children = (
+				036D54BE25CEF0E2007252F3 /* Contact+CoreDataClass.swift */,
+				036D54BF25CEF0E2007252F3 /* Contact+CoreDataProperties.swift */,
 				036D54A925CEEF92007252F3 /* ContactPlayApp.swift */,
 				036D54AB25CEEF92007252F3 /* ContentView.swift */,
 				036D54AD25CEEF93007252F3 /* Assets.xcassets */,
@@ -144,10 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036D54C125CEF0E2007252F3 /* Contact+CoreDataProperties.swift in Sources */,
 				036D54B325CEEF93007252F3 /* Persistence.swift in Sources */,
 				036D54AC25CEEF92007252F3 /* ContentView.swift in Sources */,
 				036D54B625CEEF93007252F3 /* ContactPlay.xcdatamodeld in Sources */,
 				036D54AA25CEEF92007252F3 /* ContactPlayApp.swift in Sources */,
+				036D54C025CEF0E2007252F3 /* Contact+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

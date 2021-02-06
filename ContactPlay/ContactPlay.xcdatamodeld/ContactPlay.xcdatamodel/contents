@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contact" representedClassName="Contact" syncable="YES">
-        <attribute name="birthMonth" attributeType="Integer 32" minValueString="1" maxValueString="12" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="birthMonth" attributeType="Integer 32" minValueString="1" maxValueString="12" defaultValueString="1" usesScalarValueType="YES"/>
         <attribute name="birthYear" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="firstName" attributeType="String"/>
         <attribute name="lastName" attributeType="String"/>

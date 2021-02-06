@@ -25,11 +25,17 @@ class GroupedContactProvider: ObservableObject {
     guard let context = context else { return }
     let fetchRequest: NSFetchRequest = Contact.fetchRequest()
     fetchRequest.sortDescriptors = sortByNameDescriptors
+//    fetchRequest.propertiesToGroupBy = [\Contact.lastName]
+//    fetchRequest.resultType = .dictionaryResultType
     do {
       let contactsArray = try context.fetch(fetchRequest)
       // loop over array and get first letter of last name,
       // add to dict -- everything is already sorted, so we only need to look
       // for new first letters in the last name
+      // ACTUALLY -- can add a properties to group by and set the .resultType
+      // to .DictionaryResultType ???
+      // see: https://developer.apple.com/forums/thread/129689
+      // see: https://stackoverflow.com/questions/31935618/group-by-in-core-data-in-ios-swift-not-working
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

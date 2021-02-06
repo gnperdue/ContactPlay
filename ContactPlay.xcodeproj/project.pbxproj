@@ -19,6 +19,7 @@
 		036D54CB25CF0AF9007252F3 /* SimpleSortingChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */; };
 		036D54CE25CF0E83007252F3 /* GroupedContactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */; };
 		036D54D225CF16C1007252F3 /* MutableSortContactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */; };
+		03CE4ADA25CF61C20098A209 /* GroupedContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE4AD925CF61C20098A209 /* GroupedContactsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSortingChoiceView.swift; sourceTree = "<group>"; };
 		036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedContactProvider.swift; sourceTree = "<group>"; };
 		036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSortContactProvider.swift; sourceTree = "<group>"; };
+		03CE4AD925CF61C20098A209 /* GroupedContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedContactsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				036D54B725CEEF93007252F3 /* Info.plist */,
 				036D54B425CEEF93007252F3 /* ContactPlay.xcdatamodeld */,
 				036D54AF25CEEF93007252F3 /* Preview Content */,
+				03CE4AD925CF61C20098A209 /* GroupedContactsView.swift */,
 			);
 			path = ContactPlay;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CE4ADA25CF61C20098A209 /* GroupedContactsView.swift in Sources */,
 				036D54C125CEF0E2007252F3 /* Contact+CoreDataProperties.swift in Sources */,
 				036D54B325CEEF93007252F3 /* Persistence.swift in Sources */,
 				036D54AC25CEEF92007252F3 /* ContentView.swift in Sources */,

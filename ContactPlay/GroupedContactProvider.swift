@@ -36,6 +36,7 @@ class GroupedContactProvider: ObservableObject {
       // to .DictionaryResultType ???
       // see: https://developer.apple.com/forums/thread/129689
       // see: https://stackoverflow.com/questions/31935618/group-by-in-core-data-in-ios-swift-not-working
+      print(contactsArray)
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

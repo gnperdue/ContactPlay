@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SimpleSortingChoiceView: View {
   @Environment(\.managedObjectContext) private var viewContext
-  @StateObject var contactProvider = GroupedContactProvider()
+  @StateObject var contactProvider = MutableSortContactProvider()
   
   var body: some View {
     VStack {

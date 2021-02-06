@@ -10,22 +10,12 @@ import SwiftUI
 
 class GroupedContactProvider: ObservableObject {
 
-  @Published var contacts: [Contact] = []
-  @Published var sortByName: Bool = true
+  @Published var contacts: [String: Contact] = [:]
   private var context: NSManagedObjectContext?
   private let sortByNameDescriptors = [
     NSSortDescriptor(keyPath: \Contact.lastName, ascending: true),
     NSSortDescriptor(keyPath: \Contact.firstName, ascending: true)
   ]
-  private let sortByDateDescriptors = [
-    NSSortDescriptor(keyPath: \Contact.birthYear, ascending: true),
-    NSSortDescriptor(keyPath: \Contact.birthMonth, ascending: true)
-  ]
-  
-  public func toggle() {
-    self.sortByName.toggle()
-    reFetch()
-  }
 
   public func setContext(_ context: NSManagedObjectContext) {
     self.context = context
@@ -34,10 +24,12 @@ class GroupedContactProvider: ObservableObject {
   public func reFetch() {
     guard let context = context else { return }
     let fetchRequest: NSFetchRequest = Contact.fetchRequest()
-    fetchRequest.sortDescriptors =
-      sortByName ? sortByNameDescriptors : sortByDateDescriptors
+    fetchRequest.sortDescriptors = sortByNameDescriptors
     do {
-      self.contacts = try context.fetch(fetchRequest)
+      let contactsArray = try context.fetch(fetchRequest)
+      // loop over array and get first letter of last name,
+      // add to dict -- everything is already sorted, so we only need to look
+      // for new first letters in the last name
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

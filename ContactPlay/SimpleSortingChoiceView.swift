@@ -11,17 +11,11 @@ struct SimpleSortingChoiceView: View {
   @Environment(\.managedObjectContext) private var viewContext
   @State private var sortByName = true
   
-  let sortByNameDescriptors = [
-    NSSortDescriptor(keyPath: \Contact.lastName, ascending: true),
-    NSSortDescriptor(keyPath: \Contact.firstName, ascending: true)
-  ]
-  let sortByDateDescriptors = [
-    NSSortDescriptor(keyPath: \Contact.birthYear, ascending: true),
-    NSSortDescriptor(keyPath: \Contact.birthMonth, ascending: true)
-  ]
-
   @FetchRequest(
-    sortDescriptors: sortByName ? sortByNameDescriptors : sortByDateDescriptors,
+    sortDescriptors: [
+      NSSortDescriptor(keyPath: \Contact.birthYear, ascending: true),
+      NSSortDescriptor(keyPath: \Contact.birthMonth, ascending: true)
+    ],
     animation: .default)
   private var contacts: FetchedResults<Contact>
   

@@ -9,35 +9,32 @@ import SwiftUI
 
 struct SimpleSortingChoiceView: View {
   @Environment(\.managedObjectContext) private var viewContext
-  @State private var sortByName = true
-  
-  @FetchRequest(
-    sortDescriptors: [
-      NSSortDescriptor(keyPath: \Contact.birthYear, ascending: true),
-      NSSortDescriptor(keyPath: \Contact.birthMonth, ascending: true)
-    ],
-    animation: .default)
-  private var contacts: FetchedResults<Contact>
+  @StateObject var contactProvider = ContactProvider()
   
   var body: some View {
     VStack {
       Button(action: {
-        sortByName.toggle()
+        contactProvider.toggle()
       }, label: {
-        if sortByName {
+        if contactProvider.sortByName {
           Text("Sort by date")
         } else {
           Text("Sort by name")
         }
       })
       List {
-        ForEach(contacts) { contact in
+        ForEach(contactProvider.contacts) { contact in
           Text("\(contact.lastName!), \(contact.firstName!): " +
                 "\(contact.birthMonth)/\(contact.birthYear)")
         }
       }
     }
+    .onAppear {
+      contactProvider.setContext(viewContext)
+      contactProvider.reFetch()
+    }
   }
+  
 }
 
 struct SimpleSortingChoiceView_Previews: PreviewProvider {

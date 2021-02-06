@@ -17,14 +17,20 @@ struct PersistenceController {
     let newContact1 = Contact(context: viewContext)
     newContact1.lastName = "Appleseed"
     newContact1.firstName = "John"
-    newContact1.birthYear = Int32(1977)
+    newContact1.birthYear = Int32(1985)
     newContact1.birthMonth = Int32(9)
 
     let newContact2 = Contact(context: viewContext)
     newContact2.lastName = "Zoolander"
     newContact2.firstName = "Jane"
-    newContact2.birthYear = Int32(1985)
+    newContact2.birthYear = Int32(1977)
     newContact2.birthMonth = Int32(6)
+
+    let newContact3 = Contact(context: viewContext)
+    newContact3.lastName = "Appleseed"
+    newContact3.firstName = "Jane"
+    newContact3.birthYear = Int32(1990)
+    newContact3.birthMonth = Int32(1)
 
     do {
       try viewContext.save()

@@ -38,7 +38,6 @@ class ContactProvider: ObservableObject {
       sortByName ? sortByNameDescriptors : sortByDateDescriptors
     do {
       self.contacts = try context.fetch(fetchRequest)
-      print(self.contacts.count)
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

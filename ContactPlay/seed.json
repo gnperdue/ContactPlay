@@ -25,7 +25,7 @@
   },
   {
     "firstName": "Edward",
-    "lastName": "Muon",
+    "lastName": "Muon-Neutrino",
     "birthMonth": 11,
     "birthYear": 1981
   },
@@ -49,8 +49,110 @@
   },
   {
     "firstName": "Isaac",
-    "lastName": "Strange",
+    "lastName": "Beauty",
     "birthMonth": 6,
     "birthYear": 1985
+  },
+  {
+    "firstName": "James",
+    "lastName": "Boson",
+    "birthMonth": 2,
+    "birthYear": 1985
+  },
+  {
+    "firstName": "Katherine",
+    "lastName": "Tau-Neutrino",
+    "birthMonth": 5,
+    "birthYear": 1984
+  },
+  {
+    "firstName": "Louise",
+    "lastName": "Photon",
+    "birthMonth": 5,
+    "birthYear": 1984
+  },
+  {
+    "firstName": "Martin",
+    "lastName": "Muon",
+    "birthMonth": 11,
+    "birthYear": 1986
+  },
+  {
+    "firstName": "Nella",
+    "lastName": "Quarkino",
+    "birthMonth": 12,
+    "birthYear": 1986
+  },
+  {
+    "firstName": "Oscar",
+    "lastName": "Electron-Neutrino",
+    "birthMonth": 3,
+    "birthYear": 1987
+  },
+  {
+    "firstName": "Patrick",
+    "lastName": "Boson",
+    "birthMonth": 1,
+    "birthYear": 1987
+  },
+  {
+    "firstName": "Quincy",
+    "lastName": "Gluon",
+    "birthMonth": 8,
+    "birthYear": 1987
+  },
+  {
+    "firstName": "Rachel",
+    "lastName": "Gluon",
+    "birthMonth": 11,
+    "birthYear": 1989
+  },
+  {
+    "firstName": "Sandra",
+    "lastName": "Graviton",
+    "birthMonth": 5,
+    "birthYear": 1989
+  },
+  {
+    "firstName": "Terrance",
+    "lastName": "Graviton",
+    "birthMonth": 8,
+    "birthYear": 1991
+  },
+  {
+    "firstName": "Ulrich",
+    "lastName": "Gluon",
+    "birthMonth": 5,
+    "birthYear": 1992
+  },
+  {
+    "firstName": "Voltron",
+    "lastName": "Gluino",
+    "birthMonth": 9,
+    "birthYear": 1994
+  },
+  {
+    "firstName": "Walter",
+    "lastName": "Boson",
+    "birthMonth": 9,
+    "birthYear": 1994
+  },
+  {
+    "firstName": "Xavier",
+    "lastName": "Boson",
+    "birthMonth": 7,
+    "birthYear": 1996
+  },
+  {
+    "firstName": "Yolanda",
+    "lastName": "Truth",
+    "birthMonth": 7,
+    "birthYear": 1996
+  },
+  {
+    "firstName": "Zander",
+    "lastName": "Gluon",
+    "birthMonth": 1,
+    "birthYear": 1997
   },
 ]

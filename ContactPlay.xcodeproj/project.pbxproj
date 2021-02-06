@@ -73,17 +73,17 @@
 				036D54BE25CEF0E2007252F3 /* Contact+CoreDataClass.swift */,
 				036D54BF25CEF0E2007252F3 /* Contact+CoreDataProperties.swift */,
 				036D54A925CEEF92007252F3 /* ContactPlayApp.swift */,
-				036D54C625CEF352007252F3 /* seed.json */,
 				036D54AB25CEEF92007252F3 /* ContentView.swift */,
-				036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */,
 				036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */,
+				03CE4AD925CF61C20098A209 /* GroupedContactsView.swift */,
 				036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */,
-				036D54AD25CEEF93007252F3 /* Assets.xcassets */,
 				036D54B225CEEF93007252F3 /* Persistence.swift */,
+				036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */,
+				036D54AD25CEEF93007252F3 /* Assets.xcassets */,
 				036D54B725CEEF93007252F3 /* Info.plist */,
+				036D54C625CEF352007252F3 /* seed.json */,
 				036D54B425CEEF93007252F3 /* ContactPlay.xcdatamodeld */,
 				036D54AF25CEEF93007252F3 /* Preview Content */,
-				03CE4AD925CF61C20098A209 /* GroupedContactsView.swift */,
 			);
 			path = ContactPlay;
 			sourceTree = "<group>";

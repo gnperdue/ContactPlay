@@ -18,6 +18,7 @@
 		036D54C725CEF352007252F3 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 036D54C625CEF352007252F3 /* seed.json */; };
 		036D54CB25CF0AF9007252F3 /* SimpleSortingChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */; };
 		036D54CE25CF0E83007252F3 /* GroupedContactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */; };
+		036D54D225CF16C1007252F3 /* MutableSortContactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		036D54C625CEF352007252F3 /* seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 		036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSortingChoiceView.swift; sourceTree = "<group>"; };
 		036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedContactProvider.swift; sourceTree = "<group>"; };
+		036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSortContactProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				036D54AB25CEEF92007252F3 /* ContentView.swift */,
 				036D54CA25CF0AF9007252F3 /* SimpleSortingChoiceView.swift */,
 				036D54CD25CF0E83007252F3 /* GroupedContactProvider.swift */,
+				036D54D125CF16C1007252F3 /* MutableSortContactProvider.swift */,
 				036D54AD25CEEF93007252F3 /* Assets.xcassets */,
 				036D54B225CEEF93007252F3 /* Persistence.swift */,
 				036D54B725CEEF93007252F3 /* Info.plist */,
@@ -167,6 +170,7 @@
 				036D54AA25CEEF92007252F3 /* ContactPlayApp.swift in Sources */,
 				036D54CB25CF0AF9007252F3 /* SimpleSortingChoiceView.swift in Sources */,
 				036D54C025CEF0E2007252F3 /* Contact+CoreDataClass.swift in Sources */,
+				036D54D225CF16C1007252F3 /* MutableSortContactProvider.swift in Sources */,
 				036D54CE25CF0E83007252F3 /* GroupedContactProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

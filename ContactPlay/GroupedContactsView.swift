@@ -13,14 +13,15 @@ struct GroupedContactsView: View {
 
   var body: some View {
     VStack {
-      // need tp iterate over dict and make a section for each key,
-      // then a list within each section of the contacts belonging to it
-//      List {
-//        ForEach(contactProvider.contacts.keys, id: \.self) { key in
-//          
-//        }
-//      }
-      Text("mellow")
+      List {
+        ForEach(contactProvider.letters, id: \.self) { letter in
+          Section(header: Text(String(letter))) {
+            ForEach(contactProvider.contacts[letter]!, id: \.self) { contact in
+              Text("\(contact.lastName!), \(contact.firstName!)")
+            }
+          }
+        }
+      }
     }
     .onAppear {
       contactProvider.setContext(viewContext)
@@ -32,5 +33,7 @@ struct GroupedContactsView: View {
 struct GroupedContactsView_Previews: PreviewProvider {
   static var previews: some View {
     GroupedContactsView()
+      .environment(\.managedObjectContext,
+                   PersistenceController.preview.container.viewContext)
   }
 }

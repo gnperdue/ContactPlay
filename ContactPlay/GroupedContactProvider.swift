@@ -11,12 +11,13 @@ import SwiftUI
 class GroupedContactProvider: ObservableObject {
 
   @Published var contacts: [Character: [Contact]] = [:]
+  @Published var letters: [Character] = []
   private var context: NSManagedObjectContext?
   private let sortByNameDescriptors = [
     NSSortDescriptor(keyPath: \Contact.lastName, ascending: true),
     NSSortDescriptor(keyPath: \Contact.firstName, ascending: true)
   ]
-  private let letters = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+  private let allLetters = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
   public func setContext(_ context: NSManagedObjectContext) {
     self.context = context
@@ -27,8 +28,10 @@ class GroupedContactProvider: ObservableObject {
     let fetchRequest: NSFetchRequest = Contact.fetchRequest()
     fetchRequest.sortDescriptors = sortByNameDescriptors
 //    fetchRequest.propertiesToGroupBy = [\Contact.lastName]
+//    fetchRequest.propertiesToGroupBy = [#keyPath(Contact.lastName)]
 //    fetchRequest.resultType = .dictionaryResultType
     do {
+      letters = []
       let contactsArray = try context.fetch(fetchRequest)
       // loop over array and get first letter of last name,
       // add to dict -- everything is already sorted, so we only need to look
@@ -41,10 +44,12 @@ class GroupedContactProvider: ObservableObject {
         if let firstLetterOfLastName = contact.lastName?.first {
           if !contacts.keys.contains(firstLetterOfLastName) {
             contacts[firstLetterOfLastName] = []
+            letters.append(firstLetterOfLastName)
           }
           contacts[firstLetterOfLastName]?.append(contact)
         }
       }
+      print(contacts)
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

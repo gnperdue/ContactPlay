@@ -8,6 +8,7 @@
 import CoreData
 import SwiftUI
 
+
 class GroupedContactProvider: ObservableObject {
 
   @Published var contacts: [Character: [Contact]] = [:]
@@ -33,9 +34,6 @@ class GroupedContactProvider: ObservableObject {
     do {
       letters = []
       let contactsArray = try context.fetch(fetchRequest)
-      // loop over array and get first letter of last name,
-      // add to dict -- everything is already sorted, so we only need to look
-      // for new first letters in the last name
       // ACTUALLY -- can add a properties to group by and set the .resultType
       // to .DictionaryResultType ???
       // see: https://developer.apple.com/forums/thread/129689
@@ -49,7 +47,6 @@ class GroupedContactProvider: ObservableObject {
           contacts[firstLetterOfLastName]?.append(contact)
         }
       }
-      print(contacts)
     } catch let error as NSError {
       print("fetch error: \(error), \(error.userInfo)")
     }

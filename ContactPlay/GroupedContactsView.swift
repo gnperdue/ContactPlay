@@ -10,23 +10,33 @@ import SwiftUI
 struct GroupedContactsView: View {
   @Environment(\.managedObjectContext) private var viewContext
   @StateObject var contactProvider = GroupedContactProvider()
+  @State var sectionState: [Character: Bool] = [:]
 
   var body: some View {
     VStack {
       List {
         ForEach(contactProvider.letters, id: \.self) { letter in
-          Section(header: Text(String(letter))) {
-            ForEach(contactProvider.contacts[letter]!, id: \.self) { contact in
-              Text("\(contact.lastName!), \(contact.firstName!)")
+          Section(header: Label(String(letter), systemImage: (sectionState[letter] ?? false) ? "arrow.down" : "arrow.right") .onTapGesture {
+            sectionState[letter] = !isExpanded(letter)
+          }) {
+            if isExpanded(letter) {
+              ForEach(contactProvider.contacts[letter]!, id: \.self) { contact in
+                Text("\(contact.lastName!), \(contact.firstName!)")
+              }
             }
           }
         }
       }
+      .listStyle(GroupedListStyle())
     }
     .onAppear {
       contactProvider.setContext(viewContext)
       contactProvider.reFetch()
     }
+  }
+  
+  func isExpanded(_ letter: Character) -> Bool {
+    sectionState[letter] ?? false
   }
 }
 

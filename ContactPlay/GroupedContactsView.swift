@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct GroupedContactsView: View {
+  @Environment(\.managedObjectContext) private var viewContext
+  @StateObject var contactProvider = GroupedContactProvider()
+
   var body: some View {
-    Text("mellow")
+    VStack {
+      // need tp iterate over dict and make a section for each key,
+      // then a list within each section of the contacts belonging to it
+//      List {
+//        ForEach(contactProvider.contacts.keys, id: \.self) { key in
+//          
+//        }
+//      }
+      Text("mellow")
+    }
+    .onAppear {
+      contactProvider.setContext(viewContext)
+      contactProvider.reFetch()
+    }
   }
 }
 
